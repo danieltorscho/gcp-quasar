@@ -13,22 +13,42 @@
       "yarn start"
     ]
   },
-  "hosting": {
-    "public": "dist/ssr",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "ssrapp",
-        "region": "europe-west1"
-      }
-    ],
-    "trailingSlash": false
-  },
+  "hosting": [
+    {
+      "target": "staging",
+      "public": "dist/ssr",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "ssrapp",
+          "region": "europe-west1"
+        }
+      ],
+      "trailingSlash": false
+    },
+    {
+      "target": "prod",
+      "public": "dist/ssr",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "ssrapp",
+          "region": "europe-west1"
+        }
+      ],
+      "trailingSlash": false
+    }
+  ],
   "storage": {
     "rules": "storage.rules"
   },
