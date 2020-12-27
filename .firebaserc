@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "gcp-quasar"
+  },
+  "targets": {
+    "gcp-quasar": {
+      "hosting": {
+        "staging": [
+          "staging-qcp-quasar"
+        ],
+        "prod": [
+          "qcp-quasar"
+        ]
+      }
+    }
   }
 }
